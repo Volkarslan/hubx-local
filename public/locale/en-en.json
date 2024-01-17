@@ -1,0 +1,37 @@
+{
+    "general": {
+        "more": "Learn More"
+    },
+    "brief": {
+        "title": {
+            "feature_1": "DOCUMENT SCANNER",
+            "feature_2": "SIGN & STAMP",
+            "feature_3": "BATCH SCANNER",
+            "feature_4": "ADVANCED FILTERS",
+            "feature_5": "EXPORT & SHARE"
+        },
+        "slogan": {
+            "feature_1": "Scan with Ease",
+            "feature_2": "One-Tap Focus",
+            "feature_3": "Multiple Page Scan",
+            "feature_4": "Unique Filters",
+            "feature_5": "All-Round Conversion"
+        },
+        "description": {
+            "feature_1": "Scan any document instantly with your mobile device by just a few steps. Save as PDF,JPG,ZIP,TXT and Word format.",
+            "feature_2": "Draw, scan or import your signature and stamp with a simple touch. Sign and stamp any document with just a single tap!",
+            "feature_3": "Scan multiple pages or documents in multiple-scanning mode. Batch all scans as a single document.",
+            "feature_4": "Apply advanced filters and enhance quality with various custom made filters. Manually edit brightness and contrast by your own choice on the custom filters.",
+            "feature_5": "Export your scans as PDF,JPG,ZIP,TXT and Word."
+        }
+    },
+    "action": {
+        "title": {
+            "feature_1": "Document Scanner",
+            "feature_2": "Sign & Stamp",
+            "feature_3": "Batch Scanner",
+            "feature_4": "Advanced Filters",
+            "feature_5": "Export & Share"
+        }
+    }
+}
