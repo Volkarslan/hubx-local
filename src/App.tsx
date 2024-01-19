@@ -4,7 +4,6 @@ import styles from './App.module.css';
 import { Header } from "./components/header";
 import { Footer } from "./components/footer";
 import { Feature } from "./components/feature";
-import { List } from "./components/list";
 
 export function App() {
   return (
@@ -16,7 +15,6 @@ export function App() {
         <div className={styles.wrapper}>
           <div className={styles.container}>
             <Feature />
-            <List />
           </div>
         </div>
       </main>
