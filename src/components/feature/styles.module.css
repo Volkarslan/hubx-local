@@ -1,0 +1,143 @@
+.featureSection {
+  background-color: #fff;
+  padding-top: 55px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 75px;
+  }
+}
+
+.featureBlock {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+
+  @media screen and (min-width: 1200px) {
+    align-items: flex-end;
+    flex-direction: row;
+    min-height: 540px;
+    padding: 60px 130px 0 200px;
+  }
+}
+
+.featurePhoneArea {
+  display: flex;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  @media screen and (min-width: 1200px) {
+    justify-content: flex-start;
+    padding-left: 0;
+    padding-right: 100px;
+  }
+}
+
+.featureBackground {
+  max-width: 245px;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 365px;
+  }
+}
+
+.featureBriefArea {
+  margin: 0 auto;
+  max-width: 375px;
+  padding: 0 25px;
+
+  @media screen and (min-width: 1200px) {
+    margin: unset;
+    max-width: 555px;
+    padding: 0 0 165px 0;
+  }
+}
+
+.featureTitle {
+  color: #0381ff;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: normal;
+  margin-bottom: 16px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 1200px) {
+    text-align: right;
+  }
+}
+
+.featureSlogan {
+  color: #0b122a;
+  font-family: 'SF Pro Display';
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  margin-bottom: 15px;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 20px;
+    text-align: right;
+  }
+}
+
+.featureDescription {
+  color: #0b172a;
+  font-family: 'SF Pro Display';
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  line-height: 28px;
+  margin-bottom: 32px;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 20px;
+    letter-spacing: 0.8px;
+    line-height: 32px;
+    text-align: right;
+  }
+}
+
+.featureCTAArea {
+  margin-bottom: 45px;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    text-align: right;
+    margin-bottom: 0;
+  }
+}
+
+.featureCTA {
+  border-radius: 2px;
+  border: 0.5px solid rgba(0, 0, 0, 0.16);
+  color: #0b122a;
+  font-family: 'SF Pro Display';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 20px;
+    padding: 15px 20px;
+  }
+}
+
+.featureCTA:hover {
+  border: 0.5px solid #0381ff;
+  color: #0381ff;
+}

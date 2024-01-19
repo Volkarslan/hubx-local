@@ -1,13 +1,13 @@
 .footer {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  height: 5vh;
   background: #003049;
   color: #ffffff;
+  display: flex;
+  height: 5vh;
+  justify-content: center;
 }
 
 .footer a {
-  text-decoration: none;
   color: #d62828;
+  text-decoration: none;
 }

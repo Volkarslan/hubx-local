@@ -1,9 +1,9 @@
 .header {
+  align-items: center;
   background: #003049;
-  height: 5vh;
   color: #ffffff;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  height: 5vh;
+  justify-content: center;
   padding: 0 20px;
 }
