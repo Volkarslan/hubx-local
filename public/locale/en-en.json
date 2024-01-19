@@ -4,11 +4,11 @@
     },
     "brief": {
         "title": {
-            "feature_1": "DOCUMENT SCANNER",
-            "feature_2": "SIGN & STAMP",
-            "feature_3": "BATCH SCANNER",
-            "feature_4": "ADVANCED FILTERS",
-            "feature_5": "EXPORT & SHARE"
+            "feature_1": "Document Scanner",
+            "feature_2": "Sign & Stamp",
+            "feature_3": "Batch Scanner",
+            "feature_4": "Advanced Filters",
+            "feature_5": "Export & Share"
         },
         "slogan": {
             "feature_1": "Scan with Ease",
@@ -23,15 +23,6 @@
             "feature_3": "Scan multiple pages or documents in multiple-scanning mode. Batch all scans as a single document.",
             "feature_4": "Apply advanced filters and enhance quality with various custom made filters. Manually edit brightness and contrast by your own choice on the custom filters.",
             "feature_5": "Export your scans as PDF,JPG,ZIP,TXT and Word."
-        }
-    },
-    "action": {
-        "title": {
-            "feature_1": "Document Scanner",
-            "feature_2": "Sign & Stamp",
-            "feature_3": "Batch Scanner",
-            "feature_4": "Advanced Filters",
-            "feature_5": "Export & Share"
         }
     }
 }

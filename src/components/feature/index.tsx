@@ -17,6 +17,7 @@ import background_3_item_3 from '../../../public/assets/images/HubX-Feature-3-Fi
 import background_4_item_1 from '../../../public/assets/images/HubX-Bright-1.png';
 import background_4_item_2 from '../../../public/assets/images/HubX-Cons-1.png';
 
+import Circle from '../../../public/assets/svgs/HubX-Circle-1.jsx';
 import DocLogo from '../../../public/assets/svgs/HubX-Doc-1.jsx';
 import CertLogo from '../../../public/assets/svgs/HubX-Cert-1.jsx';
 import ScanLogo from '../../../public/assets/svgs/HubX-Scan-1.jsx';
@@ -65,24 +66,6 @@ function Feature() {
       title: text.brief.title.feature_5,
       slogan: text.brief.slogan.feature_5,
       description: text.brief.description.feature_5,
-    },
-  ];
-
-  const list = [
-    {
-      name: text.action.title.feature_1,
-    },
-    {
-      name: text.action.title.feature_2,
-    },
-    {
-      name: text.action.title.feature_3,
-    },
-    {
-      name: text.action.title.feature_4,
-    },
-    {
-      name: text.action.title.feature_5,
     },
   ];
 
@@ -199,13 +182,16 @@ function Feature() {
       </section>
 
       <section className={styles.listArea}>
-        {list.map((listItem, index) => (
+        {features.map((listItem, index) => (
           <div
             key={index}
             className={`${styles.listItem} ${activeIndex === index ? styles.activeListItem : ""}`}
             onClick={() => setActiveIndex(index)}
           >
             <div className={styles.listItemLogo}>
+              {index === activeIndex && (
+                <Circle color={"#0381ff"} />
+              )}
               {index === 0 &&(
                 <DocLogo color={`${activeIndex === index ? "#0381ff" : "#666666"}`}/>
               )}
@@ -222,7 +208,10 @@ function Feature() {
                 <ExpLogo color={`${activeIndex === index ? "#0381ff" : "#666666"}`}/>
               )}
             </div>
-            <div className={styles.listItemTitle}>{listItem.name}</div>
+
+            <div className={styles.listItemTitle}>
+              {listItem.title}
+            </div>
           </div>
         ))}
       </section>
