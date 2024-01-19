@@ -11,6 +11,8 @@
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
+  overflow: hidden;
+  position: relative;
 
   @media screen and (min-width: 1200px) {
     align-items: flex-end;
@@ -25,6 +27,7 @@
   justify-content: center;
   padding-left: 50px;
   padding-right: 50px;
+  overflow: hidden;
 
   @media screen and (min-width: 1200px) {
     justify-content: flex-start;
@@ -33,11 +36,83 @@
   }
 }
 
+.featurePhoneAreaRelative {
+  position: relative;
+}
+
 .featureBackground {
+  position: relative;
   max-width: 245px;
 
   @media screen and (min-width: 1200px) {
     max-width: 365px;
+  }
+}
+
+.feature2Item1 {
+  position: absolute;
+  left: calc(50% - 175px);
+  bottom: 75px;
+  width: 120px;
+
+  @media screen and (min-width: 1200px) {
+    width: 200px;
+    left: 115px;
+    bottom: 95px;
+  }
+}
+
+.feature2Item2 {
+  position: absolute;
+  left: calc(50% + 50px);
+  width: 120px;
+  bottom: 125px;
+
+  @media screen and (min-width: 1200px) {
+    bottom: unset;
+    width: 200px;
+    left: 440px;
+    top: 265px;
+  }
+}
+
+.feature4Item1 {
+  position: absolute;
+  left: calc(50% - 135px);
+  width: 28px;
+  bottom: 13px;
+
+  @media screen and (min-width: 1200px) {
+    left: 180px;
+    bottom: unset;
+    width: 43px;
+    top: 225px;
+  }
+}
+
+.feature4Item2 {
+  position: absolute;
+  left: calc(50% + 105px);
+  width: 28px;
+  bottom: 13px;
+
+  @media screen and (min-width: 1200px) {
+    left: 550px;
+    bottom: unset;
+    width: 43px;
+    top: 225px;
+  }
+}
+
+.feature3Items {
+  position: absolute;
+  width: 200px;
+  left: calc(50% - 100px);
+  top: 95px;
+
+  @media screen and (min-width: 1200px) {
+    left: 40px;
+    width: 300px;
   }
 }
 
@@ -48,8 +123,12 @@
 
   @media screen and (min-width: 1200px) {
     margin: unset;
-    max-width: 555px;
+    max-width: 400px;
     padding: 0 0 165px 0;
+  }
+
+  @media screen and (min-width: 1440px) {
+    max-width: 555px;
   }
 }
 

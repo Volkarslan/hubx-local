@@ -1,18 +1,27 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import React from 'react';
 import { useState } from 'react';
+import { motion } from "framer-motion"
 
-import background_1 from '../../../public/assets/HubX-Feature-1-Background.png';
-import background_2 from '../../../public/assets/HubX-Feature-2-Background.png';
-import background_3 from '../../../public/assets/HubX-Feature-3-Background.png';
-import background_4 from '../../../public/assets/HubX-Feature-4-Background.png';
-import background_5 from '../../../public/assets/HubX-Feature-5-Background.png';
+import background_1 from '../../../public/assets/images/HubX-Feature-1-Background.png';
+import background_2 from '../../../public/assets/images/HubX-Feature-2-Background.png';
+import background_3 from '../../../public/assets/images/HubX-Feature-3-Background.png';
+import background_4 from '../../../public/assets/images/HubX-Feature-4-Background.png';
+import background_5 from '../../../public/assets/images/HubX-Feature-5-Background.png';
 
-import DocLogo from '../../../public/assets/HubX-Doc-1.jsx';
-import CertLogo from '../../../public/assets/HubX-Cert-1.jsx';
-import ScanLogo from '../../../public/assets/HubX-Scan-1.jsx';
-import FiltLogo from '../../../public/assets/HubX-Filt-1.jsx';
-import ExpLogo from '../../../public/assets/HubX-Exp-1.jsx';
+import background_2_item_1 from '../../../public/assets/images/HubX-Sign-1.png';
+import background_2_item_2 from '../../../public/assets/images/HubX-Stamp-1.png';
+import background_3_item_1 from '../../../public/assets/images/HubX-Feature-3-File-1.png';
+import background_3_item_2 from '../../../public/assets/images/HubX-Feature-3-File-2.png';
+import background_3_item_3 from '../../../public/assets/images/HubX-Feature-3-File-3.png';
+import background_4_item_1 from '../../../public/assets/images/HubX-Bright-1.png';
+import background_4_item_2 from '../../../public/assets/images/HubX-Cons-1.png';
+
+import DocLogo from '../../../public/assets/svgs/HubX-Doc-1.jsx';
+import CertLogo from '../../../public/assets/svgs/HubX-Cert-1.jsx';
+import ScanLogo from '../../../public/assets/svgs/HubX-Scan-1.jsx';
+import FiltLogo from '../../../public/assets/svgs/HubX-Filt-1.jsx';
+import ExpLogo from '../../../public/assets/svgs/HubX-Exp-1.jsx';
 
 import text from '../../../public/locale/en-en.json';
 
@@ -28,18 +37,25 @@ function Feature() {
     },
     {
       background: background_2,
+      background_item_1: background_2_item_1,
+      background_item_2: background_2_item_2,
       title: text.brief.title.feature_2,
       slogan: text.brief.slogan.feature_2,
       description: text.brief.description.feature_2,
     },
     {
       background: background_3,
+      background_item_1: background_3_item_1,
+      background_item_2: background_3_item_2,
+      background_item_3: background_3_item_3,
       title: text.brief.title.feature_3,
       slogan: text.brief.slogan.feature_3,
       description: text.brief.description.feature_3,
     },
     {
       background: background_4,
+      background_item_1: background_4_item_1,
+      background_item_2: background_4_item_2,
       title: text.brief.title.feature_4,
       slogan: text.brief.slogan.feature_4,
       description: text.brief.description.feature_4,
@@ -78,12 +94,88 @@ function Feature() {
         {features.map(
           (feature, index) =>
             index === activeIndex && (
-              <div key={index} className={styles.featureBlock}>
-                <div className={styles.featurePhoneArea}>
-                  <img
+              <motion.div
+                key={index}
+                className={styles.featureBlock}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+              >
+                <div className={`${styles.featurePhoneArea} ${index === 2 ? styles.featurePhoneAreaRelative : ""}`}>
+                  <motion.img
                     className={styles.featureBackground}
                     src={feature.background}
+                    initial={{ y:  600 }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 1, delay: 0.2 }}
                   />
+                    {index === 1 &&(
+                        <>
+                            <motion.img
+                            className={styles.feature2Item1}
+                            src={feature.background_item_1}
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            transition={{ duration: 0.5, delay: 1.3}}
+                            />
+
+                            <motion.img
+                            className={styles.feature2Item2}
+                            src={feature.background_item_2}
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            transition={{ duration: 0.5, delay: 1.5 }}
+                            />
+                        </>
+                    )}
+
+                    {index === 2 &&(
+                        <>
+                            <motion.img
+                            className={styles.feature3Items}
+                            src={feature.background_item_1}
+                            initial={{ scale: 1.2, y: 400 }}
+                            animate={{ scale: 0.8, y: -30 }}
+                            transition={{ duration: 0.5, delay: 1.3}}
+                            />
+
+                            <motion.img
+                            className={styles.feature3Items}
+                            src={feature.background_item_2}
+                            initial={{ scale: 1.2, y: 400 }}
+                            animate={{ scale: 0.9, y: 0 }}
+                            transition={{ duration: 0.5, delay: 1.8 }}
+                            />
+
+                            <motion.img
+                            className={styles.feature3Items}
+                            src={feature.background_item_3}
+                            initial={{ y: 400 }}
+                            animate={{ y: 30 }}
+                            transition={{ duration: 0.5, delay: 2.3 }}
+                            />
+                        </>
+                    )}
+
+                    {index === 3 &&(
+                        <>
+                            <motion.img
+                            className={styles.feature4Item1}
+                            src={feature.background_item_1}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.5, delay: 1.3}}
+                            />
+
+                            <motion.img
+                            className={styles.feature4Item2}
+                            src={feature.background_item_2}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.5, delay: 1.5 }}
+                            />
+                        </>
+                    )}
                 </div>
 
                 <div className={styles.featureBriefArea}>
@@ -96,12 +188,12 @@ function Feature() {
                   </p>
 
                   <div className={styles.featureCTAArea}>
-                    <a href="" className={styles.featureCTA}>
+                    <a href="https://www.linkedin.com/in/volkan-ugur-arslan/" className={styles.featureCTA}>
                       {text.general.more}
                     </a>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             )
         )}
       </section>
