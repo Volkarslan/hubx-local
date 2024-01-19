@@ -16,6 +16,10 @@ import background_3_item_2 from '../../../public/assets/images/HubX-Feature-3-Fi
 import background_3_item_3 from '../../../public/assets/images/HubX-Feature-3-File-3.png';
 import background_4_item_1 from '../../../public/assets/images/HubX-Bright-1.png';
 import background_4_item_2 from '../../../public/assets/images/HubX-Cons-1.png';
+import background_5_item_1 from '../../../public/assets/images/HubX-Arrow-1.png';
+import background_5_item_2 from '../../../public/assets/images/HubX-PDF-1.png';
+import background_5_item_3 from '../../../public/assets/images/HubX-JPG-1.png';
+import background_5_item_4 from '../../../public/assets/images/HubX-TXT-1.png';
 
 import Circle from '../../../public/assets/svgs/HubX-Circle-1.jsx';
 import DocLogo from '../../../public/assets/svgs/HubX-Doc-1.jsx';
@@ -63,6 +67,10 @@ function Feature() {
     },
     {
       background: background_5,
+      background_item_1: background_5_item_1,
+      background_item_2: background_5_item_2,
+      background_item_3: background_5_item_3,
+      background_item_4: background_5_item_4,
       title: text.brief.title.feature_5,
       slogan: text.brief.slogan.feature_5,
       description: text.brief.description.feature_5,
@@ -156,6 +164,42 @@ function Feature() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.5, delay: 1.5 }}
+                            />
+                        </>
+                    )}
+
+                    {index === 4 &&(
+                        <>
+                            <motion.img
+                            className={styles.feature5Item1}
+                            src={feature.background_item_1}
+                            initial={{ x: 100, y: 100 }}
+                            animate={{ x: 0, y: 0 }}
+                            transition={{ duration: 0.5, delay: 1.3}}
+                            />
+
+                            <motion.img
+                            className={styles.feature5Item2}
+                            src={feature.background_item_2}
+                            initial={{ x: 100, y: 200 }}
+                            animate={{ x: 0, y: 0 }}
+                            transition={{ duration: 0.5, delay: 1.6 }}
+                            />
+
+                            <motion.img
+                            className={styles.feature5Item3}
+                            src={feature.background_item_3}
+                            initial={{ x: 0, y: 200 }}
+                            animate={{ x: 0, y: 0 }}
+                            transition={{ duration: 0.5, delay: 2 }}
+                            />
+
+                            <motion.img
+                            className={styles.feature5Item4}
+                            src={feature.background_item_4}
+                            initial={{ x: -150, y: 200 }}
+                            animate={{ x: 0, y: 0 }}
+                            transition={{ duration: 0.5, delay: 2.3 }}
                             />
                         </>
                     )}
